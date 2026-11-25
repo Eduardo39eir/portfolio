@@ -171,7 +171,7 @@ export const portfolioData = {
       ],
       tags: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'UI/UX'],
       demoUrl: '',
-      repoUrl: '',
+      repoUrl: 'https://github.com/Eduardo39eir/dashboard_farmacos',
       coverImage: '',
       previewGradient: 'from-emerald-300/75 via-teal-500/75 to-slate-950',
       previewLabel: 'Sistema web · Gestão de estoque',

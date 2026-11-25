@@ -193,10 +193,20 @@ export function ProjectCard({ project, onSelect, borderClassName = '' }: Project
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Repositório GitHub de ${project.title}`}
-                title="Abrir repositório"
-                className="inline-flex size-[38px] items-center justify-center rounded-md border border-[var(--rail-strong)] bg-[var(--bg-surface)] text-[var(--fg-muted)] transition-colors hover:bg-[var(--bg-surface-hover)] hover:text-[var(--fg)]"
+                title="Abrir repositório no GitHub"
+                className={
+                  hasDemo
+                    ? 'inline-flex size-[38px] items-center justify-center rounded-md border border-[var(--rail-strong)] bg-[var(--bg-surface)] text-[var(--fg-muted)] transition-colors hover:bg-[var(--bg-surface-hover)] hover:text-[var(--fg)]'
+                    : 'inline-flex min-h-[38px] items-center gap-1.5 rounded-md border border-[var(--rail-strong)] bg-[var(--bg-surface)] px-3 text-[12.5px] font-medium text-[var(--fg-secondary)] transition-colors hover:bg-[var(--bg-surface-hover)] hover:text-[var(--fg)]'
+                }
               >
-                <GitHubIcon className="size-4" />
+                <GitHubIcon className="size-3.5" />
+                {!hasDemo ? (
+                  <>
+                    <span>GitHub</span>
+                    <ArrowUpRight className="size-3 text-[var(--fg-subtle)]" aria-hidden="true" />
+                  </>
+                ) : null}
               </a>
             ) : !hasDemo ? (
               <span className="font-mono-label ml-auto text-[10.5px] text-[var(--fg-subtle)]">
